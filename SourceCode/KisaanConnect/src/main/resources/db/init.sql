@@ -1533,20 +1533,33 @@ CREATE TABLE `product_images` (
 
 -- Dumping data for table `product_images`
 INSERT INTO `product_images` VALUES 
-(1, 1, 'assets/images/banner.png', 1, 1, '2026-08-30 19:09:33.0'),
-(2, 2, 'assets/images/banner.png', 1, 1, '2026-08-30 19:10:20.0'),
-(3, 3, 'assets/images/banner.png', 1, 1, '2026-08-30 19:12:55.0'),
-(4, 4, 'assets/images/banner.png', 1, 1, '2026-08-30 19:13:45.0'),
-(5, 5, 'assets/images/banner.png', 1, 1, '2026-08-30 19:20:36.0'),
-(6, 6, 'assets/images/banner.png', 1, 1, '2026-08-30 19:26:25.0'),
-(7, 7, 'assets/images/banner.png', 1, 1, '2026-08-30 19:41:38.0'),
-(8, 8, 'assets/images/banner.png', 1, 1, '2026-08-30 19:43:42.0'),
-(9, 9, 'assets/images/banner.png', 1, 1, '2026-08-30 19:43:52.0'),
-(10, 10, 'assets/images/banner.png', 1, 1, '2026-08-30 19:44:39.0'),
-(11, 11, 'assets/images/banner.png', 1, 1, '2026-08-30 20:39:12.0'),
-(12, 12, 'assets/images/banner.png', 1, 1, '2026-08-30 20:45:30.0'),
-(13, 13, 'assets/images/banner.png', 1, 1, '2026-08-31 20:07:02.0'),
-(14, 25, 'uploads/products/crop_1788275138312.png', 1, 1, '2026-09-01 20:35:38.0');
+(1, 1, 'assets/images/products/apples.jpg', 1, 1, '2026-08-30 19:09:33.0'),
+(2, 2, 'assets/images/products/apples.jpg', 1, 1, '2026-08-30 19:10:20.0'),
+(3, 3, 'assets/images/products/apples.jpg', 1, 1, '2026-08-30 19:12:55.0'),
+(4, 4, 'assets/images/products/apples.jpg', 1, 1, '2026-08-30 19:13:45.0'),
+(5, 5, 'assets/images/products/apples.jpg', 1, 1, '2026-08-30 19:20:36.0'),
+(6, 6, 'assets/images/products/apples.jpg', 1, 1, '2026-08-30 19:26:25.0'),
+(7, 7, 'assets/images/products/alphonso_mangoes.jpg', 1, 1, '2026-08-30 19:41:38.0'),
+(8, 8, 'assets/images/products/onions.jpg', 1, 1, '2026-08-30 19:43:42.0'),
+(9, 9, 'assets/images/products/alphonso_mangoes.jpg', 1, 1, '2026-08-30 19:43:52.0'),
+(10, 10, 'assets/images/products/rice.jpg', 1, 1, '2026-08-30 19:44:39.0'),
+(11, 11, 'assets/images/products/alphonso_mangoes.jpg', 1, 1, '2026-08-30 20:39:12.0'),
+(12, 12, 'assets/images/products/alphonso_mangoes.jpg', 1, 1, '2026-08-30 20:45:30.0'),
+(13, 13, 'assets/images/products/wheat.jpg', 1, 1, '2026-08-31 20:07:02.0'),
+(14, 14, 'assets/images/products/alphonso_mangoes.jpg', 1, 1, '2026-09-01 10:00:00.0'),
+(15, 15, 'assets/images/products/basmati_rice.jpg', 1, 1, '2026-09-01 10:00:00.0'),
+(16, 16, 'assets/images/products/alphonso_mangoes.jpg', 1, 1, '2026-09-01 10:00:00.0'),
+(17, 17, 'assets/images/products/basmati_rice.jpg', 1, 1, '2026-09-01 10:00:00.0'),
+(18, 18, 'assets/images/products/basmati_rice.jpg', 1, 1, '2026-09-01 10:00:00.0'),
+(19, 19, 'assets/images/products/basmati_rice.jpg', 1, 1, '2026-09-01 10:00:00.0'),
+(20, 20, 'assets/images/products/basmati_rice.jpg', 1, 1, '2026-09-01 10:00:00.0'),
+(21, 21, 'assets/images/products/alphonso_mangoes.jpg', 1, 1, '2026-09-01 10:00:00.0'),
+(22, 22, 'assets/images/products/basmati_rice.jpg', 1, 1, '2026-09-01 10:00:00.0'),
+(23, 23, 'assets/images/products/alphonso_mangoes.jpg', 1, 1, '2026-09-01 10:00:00.0'),
+(24, 24, 'assets/images/products/basmati_rice.jpg', 1, 1, '2026-09-01 10:00:00.0'),
+(25, 25, 'assets/images/products/wheat.jpg', 1, 1, '2026-09-01 20:35:38.0'),
+(26, 26, 'assets/images/products/alphonso_mangoes.jpg', 1, 1, '2026-09-01 10:00:00.0'),
+(27, 27, 'assets/images/products/basmati_rice.jpg', 1, 1, '2026-09-01 10:00:00.0');
 
 -- Table structure for table `product_price_history`
 DROP TABLE IF EXISTS `product_price_history`;
