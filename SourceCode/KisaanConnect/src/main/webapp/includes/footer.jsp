@@ -11,7 +11,7 @@
             <!-- Brand Info -->
             <div class="col-lg-4 col-md-6">
                 <div class="d-flex align-items-center gap-2 mb-3">
-                    <img src="${pageContext.request.contextPath}/assets/images/logo.png" alt="KisaanConnect Logo" height="40" style="filter: brightness(0) invert(1);" onerror="this.style.display='none'">
+                    <img src="${pageContext.request.contextPath}/assets/images/logo.png" alt="KisaanConnect Logo" height="40" class="bg-white p-1 rounded-3 shadow-sm" onerror="this.style.display='none'">
                     <span class="fs-4 fw-bold text-success">KisaanConnect</span>
                 </div>
                 <p class="text-secondary small mb-4" style="line-height: 1.7;">
