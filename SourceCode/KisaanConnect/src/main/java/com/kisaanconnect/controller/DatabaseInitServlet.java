@@ -67,13 +67,19 @@ public class DatabaseInitServlet extends HttpServlet {
                             sql = sql.substring(0, sql.length() - 1);
                         }
                         if (!sql.isEmpty()) {
+                            // Normalize boolean and timestamp literals
+                            sql = sql.replace(", true,", ", 1,")
+                                     .replace(", false,", ", 0,")
+                                     .replaceAll("\\.0'", "'");
+
                             try (Statement stmt = conn.createStatement()) {
                                 stmt.execute(sql);
                                 executedStatements++;
                             } catch (Exception e) {
                                 failedStatements++;
+                                String errSummary = e.getMessage() + " | Stmt: " + (sql.length() > 100 ? sql.substring(0, 100) : sql);
                                 if (errors.size() < 10) {
-                                    errors.add(e.getMessage());
+                                    errors.add(errSummary);
                                 }
                             }
                         }
@@ -114,9 +120,25 @@ public class DatabaseInitServlet extends HttpServlet {
                 }
             }
 
+            // Query order count
+            int orderCount = 0;
+            try (Statement s = conn.createStatement();
+                 ResultSet rs = s.executeQuery("SELECT COUNT(*) FROM orders")) {
+                if (rs.next()) {
+                    orderCount = rs.getInt(1);
+                }
+            }
+
+            StringBuilder errJson = new StringBuilder("[");
+            for (int i = 0; i < errors.size(); i++) {
+                if (i > 0) errJson.append(",");
+                errJson.append("\"").append(errors.get(i).replace("\"", "\\\"").replace("\n", " ")).append("\"");
+            }
+            errJson.append("]");
+
             out.write(String.format(
-                    "{\"success\":true,\"executed\":%d,\"failed\":%d,\"tableCount\":%d,\"userCount\":%d,\"productCount\":%d}",
-                    executedStatements, failedStatements, tableCount, userCount, productCount
+                    "{\"success\":true,\"executed\":%d,\"failed\":%d,\"tableCount\":%d,\"userCount\":%d,\"productCount\":%d,\"orderCount\":%d,\"errors\":%s}",
+                    executedStatements, failedStatements, tableCount, userCount, productCount, orderCount, errJson.toString()
             ));
 
         } catch (Exception e) {
