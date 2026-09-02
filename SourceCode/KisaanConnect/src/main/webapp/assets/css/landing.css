@@ -1,9 +1,53 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 02-Aug-2026, 11:58:25 pm
-    Author     : Jainam Vikam
-*/
+@import url('variables.css');
 
+/* ==========================================================================
+   KISAANCONNECT DESIGN SYSTEM — LANDING & HERO ENHANCEMENTS
+   ========================================================================== */
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: var(--kc-radius-pill, 9999px);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-btn-primary {
+    background: var(--kc-primary, #15803D);
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 14px rgba(21, 128, 61, 0.35);
+}
+
+.hero-btn-primary:hover {
+    background: var(--kc-primary-hover, #166534);
+    box-shadow: 0 8px 22px rgba(21, 128, 61, 0.45);
+    transform: translateY(-2px);
+}
+
+.hero-btn-outline {
+    background: #FFFFFF;
+    color: var(--kc-text, #0F172A) !important;
+    border: 1.5px solid var(--kc-border, #CBD5E1);
+}
+
+.hero-btn-outline:hover {
+    border-color: var(--kc-primary, #15803D);
+    color: var(--kc-primary, #15803D) !important;
+    transform: translateY(-2px);
+}
+
+.feature-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    background: #DCFCE7;
+    color: #15803D;
+    font-size: 0.875rem;
+    font-weight: 600;
+}

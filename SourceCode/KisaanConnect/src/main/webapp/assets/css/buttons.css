@@ -1,9 +1,99 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 02-Aug-2026, 11:56:42 pm
-    Author     : Jainam Vikam
-*/
+@import url('variables.css');
 
+/* ==========================================================================
+   KISAANCONNECT DESIGN SYSTEM — BUTTONS & INTERACTIVE STATES
+   ========================================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-family: var(--kc-font);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.5;
+    border-radius: var(--kc-radius-md, 10px);
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+}
+
+.btn:active {
+    transform: translateY(0) !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #15803D 0%, #166534 100%);
+    color: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(21, 128, 61, 0.25);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #166534 0%, #14532D 100%);
+    box-shadow: 0 4px 14px rgba(21, 128, 61, 0.35);
+    transform: translateY(-1px);
+    color: #FFFFFF !important;
+}
+
+.btn-secondary {
+    background: #F1F5F9;
+    color: #334155 !important;
+    border-color: #CBD5E1;
+}
+
+.btn-secondary:hover {
+    background: #E2E8F0;
+    color: #0F172A !important;
+    border-color: #94A3B8;
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--kc-primary, #15803D) !important;
+    border-color: var(--kc-primary, #15803D);
+}
+
+.btn-outline:hover {
+    background: var(--kc-primary-light, #DCFCE7);
+    color: var(--kc-primary-hover, #166534) !important;
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background: #EF4444;
+    color: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25);
+}
+
+.btn-danger:hover {
+    background: #DC2626;
+    box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+    transform: translateY(-1px);
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.8125rem;
+    border-radius: var(--kc-radius-sm, 8px);
+}
+
+.btn-lg {
+    padding: 14px 28px;
+    font-size: 1.05rem;
+    border-radius: var(--kc-radius-lg, 14px);
+}
+
+.btn-icon {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

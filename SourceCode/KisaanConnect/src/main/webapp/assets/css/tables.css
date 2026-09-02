@@ -1,9 +1,52 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 02-Aug-2026, 11:57:28 pm
-    Author     : Jainam Vikam
-*/
+@import url('variables.css');
 
+/* ==========================================================================
+   KISAANCONNECT DESIGN SYSTEM — DATA TABLES & LISTS
+   ========================================================================== */
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #FFFFFF;
+    border-radius: var(--kc-radius-lg, 16px);
+    border: 1px solid var(--kc-border, #E2E8F0);
+}
+
+.table, table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    color: var(--kc-text, #0F172A);
+}
+
+.table th, table.data-table th {
+    background: var(--kc-bg, #F8FAFC);
+    padding: 14px 18px;
+    font-weight: 600;
+    text-align: left;
+    color: var(--kc-text-secondary, #475569);
+    border-bottom: 1.5px solid var(--kc-border, #E2E8F0);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.table td, table.data-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--kc-border, #E2E8F0);
+    vertical-align: middle;
+}
+
+.table tbody tr, table.data-table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover, table.data-table tbody tr:hover {
+    background-color: var(--kc-bg-alt, #F1F5F9);
+}
+
+.table tbody tr:last-child td, table.data-table tbody tr:last-child td {
+    border-bottom: none;
+}

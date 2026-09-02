@@ -1,9 +1,87 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 02-Aug-2026, 11:58:10 pm
-    Author     : Jainam Vikam
-*/
+@import url('variables.css');
 
+/* ==========================================================================
+   KISAANCONNECT DESIGN SYSTEM — MODAL DIALOGS
+   ========================================================================== */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.modal-overlay.active, .modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container, .modal-dialog {
+    background: #FFFFFF;
+    border-radius: var(--kc-radius-xl, 20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 560px;
+    overflow: hidden;
+    transform: scale(0.95) translateY(10px);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.active .modal-container, .modal.show .modal-dialog {
+    transform: scale(1) translateY(0);
+}
+
+.modal-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--kc-border, #E2E8F0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--kc-text, #0F172A);
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--kc-text-muted, #94A3B8);
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: var(--kc-text, #0F172A);
+}
+
+.modal-body {
+    padding: 24px;
+    max-height: calc(85vh - 140px);
+    overflow-y: auto;
+}
+
+.modal-footer {
+    padding: 16px 24px;
+    background: var(--kc-bg, #F8FAFC);
+    border-top: 1px solid var(--kc-border, #E2E8F0);
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}

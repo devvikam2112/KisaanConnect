@@ -104,7 +104,7 @@
                     </div>
                 </div>
 
-                <div class="login-options">
+                <div class="login-options options-row">
                     <label class="remember">
                         <input type="checkbox" name="remember">
                         <span>Remember Me</span>
@@ -115,12 +115,12 @@
                     </a>
                 </div>
 
-                <button type="submit">
-                    Login to Account
+                <button type="submit" class="btn-submit">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Login to Account
                 </button>
             </form>
 
-            <div class="register-link">
+            <div class="register-link register-prompt">
                 Don't have an account?
                 <a href="${pageContext.request.contextPath}/auth/register.jsp">
                     Create Account
