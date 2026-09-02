@@ -1,0 +1,211 @@
+/* ==========================================================================
+   KISAANCONNECT DESIGN SYSTEM — TOP NAVIGATION BAR
+   ========================================================================== */
+
+.top-navbar {
+    height: 70px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    border-bottom: 1px solid var(--kc-border, #E2E8F0);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-left h2 {
+    color: var(--kc-text, #0F172A);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--kc-text, #0F172A);
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav-center {
+    flex: 1;
+    max-width: 480px;
+    margin: 0 24px;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--kc-text-muted, #94A3B8);
+    font-size: 14px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 9px 16px 9px 38px;
+    border-radius: var(--kc-radius-pill, 9999px);
+    border: 1px solid var(--kc-border, #E2E8F0);
+    background-color: var(--kc-bg, #F8FAFC);
+    font-family: var(--kc-font);
+    font-size: 0.875rem;
+    color: var(--kc-text, #0F172A);
+    transition: all 0.2s ease;
+}
+
+.search-box:focus {
+    outline: none;
+    border-color: var(--kc-primary, #15803D);
+    background-color: #FFFFFF;
+    box-shadow: var(--kc-shadow-glow, 0 0 0 3px rgba(21, 128, 61, 0.15));
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-action-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.notification {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--kc-bg, #F8FAFC);
+    border: 1px solid var(--kc-border, #E2E8F0);
+    color: var(--kc-text-secondary, #475569);
+    font-size: 16px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.notification:hover {
+    background-color: var(--kc-bg-alt, #F1F5F9);
+    color: var(--kc-primary, #15803D);
+    border-color: var(--kc-border-strong, #CBD5E1);
+}
+
+.notification-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: 9px;
+    background: #DC2626;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    border: 2px solid #FFFFFF;
+    pointer-events: none;
+    user-select: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 12px;
+    border-radius: var(--kc-radius-pill, 9999px);
+    background-color: var(--kc-bg, #F8FAFC);
+    border: 1px solid var(--kc-border, #E2E8F0);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.user-box:hover {
+    background-color: var(--kc-bg-alt, #F1F5F9);
+    border-color: var(--kc-border-strong, #CBD5E1);
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #15803D 0%, #166534 100%);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 140px;
+}
+
+.user-name {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--kc-text, #0F172A);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+}
+
+.user-role {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: var(--kc-text-muted, #94A3B8);
+    text-transform: capitalize;
+    line-height: 1.2;
+}
+
+@media (max-width: 992px) {
+    .top-navbar {
+        padding: 0 16px;
+        height: 64px;
+    }
+    .mobile-menu-toggle {
+        display: block;
+    }
+    .nav-center {
+        display: none;
+    }
+    .user-info {
+        display: none;
+    }
+}

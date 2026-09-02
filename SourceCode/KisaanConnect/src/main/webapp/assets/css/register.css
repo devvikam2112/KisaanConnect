@@ -1,0 +1,1089 @@
+    /* ==========================================================
+       KISAANCONNECT
+       Registration Page
+       Version 1.0
+    ========================================================== */
+
+    /* ===========================
+       RESET
+    =========================== */
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    html{
+
+        scroll-behavior:smooth;
+
+    }
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F4F7F3;
+    color:#1F2937;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+    /* ===========================
+       VARIABLES
+    =========================== */
+
+    :root{
+
+        --primary:#15803D;
+        --primary-dark:#166534;
+        --primary-light:#E8F5E9;
+
+        --background:#F8FAFC;
+
+        --white:#FFFFFF;
+
+        --text:#0F172A;
+
+        --text-light:#475569;
+
+        --border:#CBD5E1;
+
+        --shadow:
+            0 20px 45px rgba(0,0,0,.08);
+
+        --radius:22px;
+
+    }
+
+    /* ===========================
+       PAGE
+    =========================== */
+
+    .page{
+
+        width:100%;
+
+        height:100vh;
+
+        display:flex;
+
+    }
+
+    /* ===========================
+       LEFT SIDE
+    =========================== */
+
+    .left-section{
+
+        max-width:480px;
+        width:100%;
+        padding-top:80px;
+
+        min-width:520px;
+
+        background:linear-gradient(
+                145deg,
+                #15803D,
+                #166534
+        );
+
+        position:relative;
+
+        overflow:hidden;
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+        color:#FFFFFF !important;
+
+    }
+
+    .left-section h1, .left-section h1 span, .left-section p, .left-section .feature p, .left-section .hero-subtitle {
+        color: #FFFFFF !important;
+    }
+
+    .register-card, .register-card label, .input-group label, .role-title, .role-card h4 {
+        color: #0F172A !important;
+    }
+
+    .register-card h2 {
+        color: #15803D !important;
+    }
+
+    .register-card p, .role-card p, .login {
+        color: #475569 !important;
+    }
+
+    .register-card {
+        background: #FFFFFF !important;
+        box-shadow: 0 20px 45px rgba(0,0,0,0.08) !important;
+        border: 1px solid #E2E8F0 !important;
+    }
+
+    .input-group input {
+        background: #FFFFFF !important;
+        border: 1px solid #CBD5E1 !important;
+        color: #0F172A !important;
+    }
+
+    button, button[type="submit"] {
+        background: linear-gradient(135deg, #15803D, #166534) !important;
+        color: #FFFFFF !important;
+        font-weight: 700 !important;
+        box-shadow: 0 4px 14px rgba(21, 128, 61, 0.3) !important;
+    }
+
+    /* Decorative circles */
+
+    .left-section::before{
+
+        content:"";
+
+        position:absolute;
+
+        width:700px;
+
+        height:700px;
+
+        border-radius:50%;
+
+        border:2px solid rgba(255,255,255,.08);
+
+        left:-320px;
+
+        top:-300px;
+
+    }
+
+    .left-section::after{
+
+        content:"";
+
+        position:absolute;
+
+        width:820px;
+
+        height:820px;
+
+        background:rgba(255,255,255,.05);
+
+        border-radius:50%;
+
+        right:-360px;
+
+        bottom:-430px;
+
+    }
+
+    /* ===========================
+       HERO CONTENT
+    =========================== */
+
+    .hero-content{
+
+        width:100%;
+
+        max-width:470px;
+
+        position:relative;
+
+        z-index:5;
+
+    }
+
+.hero-logo{
+
+    width:230px;
+
+    display:block;
+
+    margin-bottom:55px;
+
+    background:#fff;
+
+    padding:16px;
+
+    border-radius:24px;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
+
+    transition:.35s;
+
+}
+
+.hero-logo:hover{
+
+    transform:scale(1.03);
+
+}
+
+    .hero-content h1{
+
+        font-size:64px;
+
+        line-height:1.05;
+
+        font-weight:700;
+
+        margin-bottom:20px;
+
+    }
+
+    .hero-content h1 span{
+
+        display:block;
+
+    }
+    /* ==========================================================
+       HERO SUBTITLE
+    ========================================================== */
+
+    .hero-subtitle{
+
+        font-size:24px;
+
+        font-weight:400;
+
+        line-height:1.7;
+
+        opacity:.95;
+
+        margin-top:15px;
+        margin-bottom:45px;
+
+    }
+
+    /* ==========================================================
+       FEATURE LIST
+    ========================================================== */
+
+    .feature-list{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:22px;
+
+    }
+
+    .feature{
+
+        display:flex;
+
+        align-items:center;
+
+        gap:18px;
+
+        padding:16px 20px;
+
+        border-radius:16px;
+
+        background:rgba(255,255,255,.06);
+
+        backdrop-filter:blur(8px);
+
+        transition:.30s;
+
+    }
+
+    .feature:hover{
+
+        transform:translateX(8px);
+
+        background:rgba(255,255,255,.14);
+
+    }
+
+    .feature span{
+
+        width:48px;
+
+        height:48px;
+
+        border-radius:50%;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        font-size:22px;
+
+        background:rgba(255,255,255,.15);
+
+    }
+
+    .feature p{
+
+        font-size:18px;
+
+        font-weight:500;
+
+        line-height:1.4;
+
+    }
+
+    /* ==========================================================
+       RIGHT SECTION
+    ========================================================== */
+
+    .right-section{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:30px 40px;
+
+    overflow-y:auto;
+
+    background:var(--background);
+
+}
+
+    /* ==========================================================
+       REGISTER CARD
+    ========================================================== */
+
+.register-card{
+
+    width:100%;
+    max-width:620px;
+
+    background:#fff;
+
+    border-radius:28px;
+
+    box-shadow:var(--shadow);
+
+    padding:28px 40px;
+
+    margin:20px 0;
+
+    opacity: 1 !important;
+
+}
+
+    .register-card h2{
+
+        text-align:center;
+
+        font-size:38px;
+
+        font-weight:700;
+
+        color:var(--primary);
+
+        margin-bottom:10px;
+
+    }
+
+    .register-card>p{
+
+        text-align:center;
+
+        color:var(--text-light);
+
+        font-size:17px;
+
+        margin-bottom:36px;
+
+        line-height:1.6;
+
+    }
+
+    /* ==========================================================
+       FORM
+    ========================================================== */
+
+    form{
+
+        width:100%;
+        margin-top:10px;
+
+    }
+    .form-row{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:18px;
+        margin-bottom:10px;
+    }
+
+    .input-group{
+        margin-bottom:18px;
+    }
+
+
+    .input-group label{
+
+        display:block;
+
+        font-size:14px;
+
+        font-weight:600;
+
+        color:var(--text);
+
+        margin-bottom:8px;
+
+    }
+
+    .input-group input{
+
+        width:100%;
+
+        height:54px;
+
+        border:1px solid var(--border);
+
+        border-radius:14px;
+
+        padding:0 18px;
+
+        font-size:15px;
+
+        font-family:'Poppins',sans-serif;
+
+        background:#fff;
+
+        transition:.25s;
+
+    }
+
+    .input-group input:focus{
+
+        outline:none;
+
+        border-color:var(--primary);
+
+        box-shadow:0 0 0 4px rgba(46,125,50,.12);
+
+    }
+    /* ==========================================================
+       ROLE TITLE
+    ========================================================== */
+
+    .role-title{
+
+        display:block;
+
+        margin-top:10px;
+
+        margin-bottom:14px;
+
+        font-size:14px;
+
+        font-weight:600;
+
+        color:var(--text);
+
+    }
+
+    /* ==========================================================
+       ROLE SELECTION
+    ========================================================== */
+
+    .role-selection{
+        display:flex;
+        gap:14px;
+        margin-top:14px;
+        margin-bottom:24px;
+    }
+
+    .role-card{
+        flex:1;
+        min-height:135px;
+        background:#FAFAFA;
+        border:2px solid var(--border);
+        border-radius:16px;
+        padding:16px 10px;
+        text-align:center;
+        cursor:pointer;
+        transition:.30s;
+        user-select:none;
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .role-card input{
+        display:none;
+    }
+
+    .role-card:hover{
+        transform:translateY(-5px);
+        border-color:var(--primary);
+        box-shadow:0 12px 28px rgba(0,0,0,.15);
+    }
+
+    .role-card.active{
+        background:#e8f8ea;
+        border:2px solid #2E7D32;
+        box-shadow:0 12px 28px rgba(46,125,50,.28);
+        transform:translateY(-5px);
+    }
+
+    .role-card .emoji{
+        width:54px;
+        height:54px;
+        margin:0 auto 10px auto;
+        border-radius:50%;
+        background:white;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:28px;
+        box-shadow:0 6px 15px rgba(0,0,0,.08);
+    }
+
+    .role-card h4{
+        font-size:16px;
+        color:var(--text);
+        font-weight:600;
+        margin-bottom:4px;
+    }
+
+    .role-card p{
+        font-size:11px;
+        color:var(--text-light);
+        line-height:1.3;
+    }
+
+    /* ==========================================================
+       BUTTON
+    ========================================================== */
+
+    button{
+        width:100%;
+        margin-top:10px;
+        height:60px;
+        font-size:20px;
+        font-weight:600;
+        border:none;
+        border-radius:16px;
+        background:linear-gradient(
+                135deg,
+                var(--primary),
+                var(--primary-dark)
+        );
+        color:white;
+        font-weight:600;
+        cursor:pointer;
+        transition:.30s;
+        letter-spacing:.3px;
+
+    }
+
+    button:hover{
+
+        transform:translateY(-3px);
+
+        box-shadow:
+
+            0 14px 30px rgba(46,125,50,.28);
+
+    }
+
+    button:active{
+
+        transform:scale(.98);
+
+    }
+
+    /* ==========================================================
+       LOGIN
+    ========================================================== */
+
+    .login{
+
+        margin-top:28px;
+
+        text-align:center;
+
+        color:var(--text-light);
+
+        font-size:15px;
+
+    }
+
+    .login a{
+
+        color:var(--primary);
+
+        font-weight:600;
+
+        text-decoration:none;
+
+        margin-left:6px;
+
+        transition:.25s;
+
+    }
+
+    .login a:hover{
+
+        color:var(--primary-dark);
+
+        text-decoration:underline;
+
+    }
+
+    /* ==========================================================
+       CARD ANIMATION
+    ========================================================== */
+
+    @keyframes cardFade{
+
+        from{
+
+            opacity:0;
+
+            transform:translateY(35px);
+
+        }
+
+        to{
+
+            opacity:1;
+
+            transform:translateY(0);
+
+        }
+
+    }
+    /* ==========================================================
+       PLACEHOLDERS
+    ========================================================== */
+
+    ::placeholder{
+
+        color:#9CA3AF;
+
+        font-size:14px;
+
+        font-weight:400;
+
+    }
+
+    /* ==========================================================
+       SELECTION
+    ========================================================== */
+
+    ::selection{
+
+        background:rgba(46,125,50,.20);
+
+        color:#111827;
+
+    }
+
+    /* ==========================================================
+       SCROLLBAR
+    ========================================================== */
+
+    ::-webkit-scrollbar{
+
+        width:8px;
+
+    }
+
+    ::-webkit-scrollbar-thumb{
+
+        background:#BDBDBD;
+
+        border-radius:20px;
+
+    }
+
+    ::-webkit-scrollbar-thumb:hover{
+
+        background:#9E9E9E;
+
+    }
+
+    /* ==========================================================
+       INPUT HOVER
+    ========================================================== */
+
+    .input-group input:hover{
+
+        border-color:#C8D1D8;
+
+    }
+
+    /* ==========================================================
+       HERO LOGO HOVER
+    ========================================================== */
+
+
+    .hero-logo:hover{
+
+        transform:scale(1.03);
+
+    }
+
+    /* ==========================================================
+       CARD LOGO
+    ========================================================== */
+.card-logo{
+
+    width:85px;
+
+    height:auto;
+
+    display:block;
+
+    margin:0 auto 12px;
+
+}
+
+.card-logo:hover{
+
+    transform:scale(1.05);
+
+}
+
+    /* ==========================================================
+       BUTTON FOCUS
+    ========================================================== */
+
+    button:focus{
+
+        outline:none;
+
+        box-shadow:
+
+            0 0 0 5px rgba(46,125,50,.18);
+
+    }
+
+    /* ==========================================================
+       LARGE LAPTOPS
+    ========================================================== */
+
+    @media (max-width:1600px){
+
+        .hero-content{
+
+            max-width:430px;
+
+        }
+
+        .hero-content h1{
+
+            font-size:72px;
+
+        }
+
+        .hero-subtitle{
+
+            font-size:21px;
+
+        }
+
+        .feature p{
+
+            font-size:17px;
+
+        }
+
+    }
+
+    /* ==========================================================
+       1366 × 768
+    ========================================================== */
+
+    @media (max-width:1366px){
+
+        .left-section{
+
+            width:38%;
+
+            min-width:470px;
+
+        }
+
+        .hero-logo{
+
+            width:165px;
+
+            margin-bottom:35px;
+
+        }
+
+        .hero-content h1{
+
+            font-size:52px;
+
+        }
+
+        .hero-subtitle{
+
+            font-size:18px;
+
+            margin-bottom:35px;
+
+        }
+
+        .feature{
+
+            padding:12px 15px;
+
+            gap:14px;
+
+        }
+
+        .feature span{
+
+            width:42px;
+
+            height:42px;
+
+            font-size:20px;
+
+        }
+
+        .feature p{
+
+            font-size:15px;
+
+        }
+
+        .register-card{
+
+            max-width:560px;
+
+            padding:30px;
+
+        }
+
+        .register-card h2{
+
+            font-size:42px;
+            margin-bottom:10px;
+
+
+        }
+
+        .input-group{
+
+            margin-bottom:14px;
+
+        }
+
+        .role-card{
+
+            padding:18px 12px;
+            transition:.25s;
+            cursor:pointer;
+
+        }
+
+        .role-card .emoji{
+
+            width:58px;
+
+            height:58px;
+
+            font-size:28px;
+
+        }
+
+    }
+
+    /* ==========================================================
+       HEIGHT FIX
+    ========================================================== */
+
+    @media (max-height:850px){
+
+        .hero-logo{
+
+            width:150px;
+
+            margin-bottom:25px;
+
+        }
+
+        .hero-content h1{
+
+            font-size:48px;
+
+            margin-bottom:12px;
+
+        }
+
+        .hero-subtitle{
+
+            font-size:18px;
+
+            margin-bottom:28px;
+
+        }
+
+        .feature-list{
+
+            gap:14px;
+
+        }
+
+        .feature{
+
+            padding:10px 14px;
+
+        }
+
+        .feature span{
+
+            width:40px;
+
+            height:40px;
+
+            font-size:18px;
+
+        }
+
+        .feature p{
+
+            font-size:14px;
+
+        }
+
+        .register-card{
+
+            padding:24px;
+
+        }
+
+        .register-card h2{
+
+            font-size:30px;
+
+            margin-bottom:6px;
+
+        }
+
+        .register-card>p{
+
+            margin-bottom:25px;
+
+        }
+
+        .input-group{
+
+            margin-bottom:12px;
+
+        }
+
+        .input-group input{
+
+            height:48px;
+
+        }
+
+        .role-selection{
+
+            margin-bottom:20px;
+
+        }
+
+        .role-card{
+
+            padding:15px;
+            cursor:pointer;
+            transition:.25s;
+
+        }
+
+        button{
+
+            height:52px;
+
+        }
+
+    }
+
+    /* ==========================================================
+       SMALL LAPTOPS
+    ========================================================== */
+
+    @media (max-width:1100px){
+
+        .left-section{
+
+            display:none;
+
+        }
+
+        .right-section{
+
+            width:100%;
+
+            padding:25px;
+
+        }
+
+        .register-card{
+
+            max-width:540px;
+
+        }
+
+    }
+
+    /* ==========================================================
+       MOBILE (Future)
+    ========================================================== */
+
+    @media (max-width:768px){
+
+        body{
+
+            overflow:auto;
+
+        }
+
+        .page{
+
+            display:block;
+
+            height:auto;
+
+        }
+
+        .right-section{
+
+            padding:25px 18px;
+
+        }
+
+        .register-card{
+
+            padding:22px;
+
+            border-radius:20px;
+
+        }
+
+        .role-selection{
+
+            flex-direction:column;
+
+        }
+
+    }
+
+    /* ==========================================================
+       END
+    ========================================================== */

@@ -1,0 +1,97 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 01-Aug-2026, 12:54:16 am
+    Author     : Jainam Vikam
+*/
+body{
+
+    margin:0;
+    background:#eef5ee;
+    font-family:Arial,sans-serif;
+
+}
+
+.role-container{
+
+    width:450px;
+
+    margin:60px auto;
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.logo{
+
+    width:110px;
+
+    margin-bottom:20px;
+
+}
+
+.role-card{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#2E7D32;
+
+    color:white;
+
+    font-size:22px;
+
+    transition:.3s;
+
+}
+
+.role-card span{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:14px;
+
+}
+
+.role-card:hover{
+
+    background:#1B5E20;
+
+    transform:scale(1.02);
+
+}
+
+.error-box{
+
+    margin-top:15px;
+
+    background:#ffdddd;
+
+    color:#b00020;
+
+    padding:12px;
+
+    border-radius:8px;
+
+}

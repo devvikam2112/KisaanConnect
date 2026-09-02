@@ -1,0 +1,117 @@
+/* ==========================================================================
+   KISAANCONNECT DESIGN SYSTEM — CSS VARIABLES & DESIGN TOKENS
+   Modern Agritech Marketplace & Operations Platform
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Brand Primary Palette (Emerald Forest) */
+    --kc-primary: #15803D;
+    --kc-primary-hover: #166534;
+    --kc-primary-active: #14532D;
+    --kc-primary-light: #F0FDF4;
+    --kc-primary-subtle: #DCFCE7;
+    --kc-primary-border: #BBF7D0;
+    --kc-primary-glow: rgba(21, 128, 61, 0.18);
+
+    /* Secondary Palette (Deep Navy / Commercial Slate) */
+    --kc-secondary: #1E3A8A;
+    --kc-secondary-hover: #1E40AF;
+    --kc-secondary-active: #172554;
+    --kc-secondary-light: #EFF6FF;
+    --kc-secondary-subtle: #DBEAFE;
+    --kc-secondary-border: #BFDBFE;
+
+    /* Accent & Warning Palette (Warm Amber Gold) */
+    --kc-accent: #D97706;
+    --kc-accent-hover: #B45309;
+    --kc-accent-light: #FFFBEB;
+    --kc-accent-subtle: #FEF3C7;
+    --kc-accent-border: #FDE68A;
+
+    /* Status: Danger / Error / Alert (Crimson) */
+    --kc-danger: #DC2626;
+    --kc-danger-hover: #B91C1C;
+    --kc-danger-light: #FEF2F2;
+    --kc-danger-subtle: #FEE2E2;
+    --kc-danger-border: #FECACA;
+
+    /* Status: Success */
+    --kc-success: #16A34A;
+    --kc-success-light: #F0FDF4;
+    --kc-success-subtle: #DCFCE7;
+    --kc-success-border: #86EFAC;
+
+    /* Status: Information (Sky / Blue) */
+    --kc-info: #0284C7;
+    --kc-info-light: #F0F9FF;
+    --kc-info-subtle: #E0F2FE;
+    --kc-info-border: #BAE6FD;
+
+    /* Neutral & Surface Palette */
+    --kc-bg: #F8FAFC;
+    --kc-bg-alt: #F1F5F9;
+    --kc-surface: #FFFFFF;
+    --kc-surface-muted: #F8FAFC;
+    --kc-border: #E2E8F0;
+    --kc-border-subtle: #F1F5F9;
+    --kc-border-strong: #CBD5E1;
+
+    /* Typography / Text Palette */
+    --kc-text: #0F172A;
+    --kc-text-secondary: #475569;
+    --kc-text-muted: #94A3B8;
+    --kc-text-inverse: #FFFFFF;
+
+    /* Sidebar / Dark Navigation Surfaces */
+    --kc-sidebar-bg: #0F291E;
+    --kc-sidebar-surface: #143A2A;
+    --kc-sidebar-hover: rgba(255, 255, 255, 0.08);
+    --kc-sidebar-active: #15803D;
+    --kc-sidebar-text: #E2E8F0;
+    --kc-sidebar-muted: #94A3B8;
+    --kc-sidebar-border: rgba(255, 255, 255, 0.08);
+
+    /* Radii Scale */
+    --kc-radius-xs: 4px;
+    --kc-radius-sm: 8px;
+    --kc-radius-md: 12px;
+    --kc-radius-lg: 16px;
+    --kc-radius-xl: 20px;
+    --kc-radius-2xl: 24px;
+    --kc-radius-pill: 9999px;
+
+    /* Shadows Scale */
+    --kc-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --kc-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+    --kc-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --kc-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+    --kc-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    --kc-shadow-glow: 0 0 0 3px rgba(21, 128, 61, 0.15);
+
+    /* Typography */
+    --kc-font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --kc-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    /* Transitions */
+    --kc-transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --kc-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --kc-transition-slow: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Legacy CSS Variable Compatibility Bridge */
+    --primary: var(--kc-primary);
+    --primary-dark: var(--kc-primary-hover);
+    --primary-light: var(--kc-primary-light);
+    --accent: var(--kc-accent);
+    --background: var(--kc-bg);
+    --card: var(--kc-surface);
+    --text: var(--kc-text);
+    --text-light: var(--kc-text-secondary);
+    --border: var(--kc-border);
+    --danger: var(--kc-danger);
+    --success: var(--kc-success);
+    --shadow: var(--kc-shadow-md);
+    --radius: var(--kc-radius-md);
+}
+

@@ -1,0 +1,183 @@
+/* ==========================================================================
+   KISAANCONNECT DESIGN SYSTEM — SIDEBAR NAVIGATION
+   ========================================================================== */
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(180deg, #0D2818 0%, #081C10 100%);
+    color: #F8FAFC;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1040;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.12);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--kc-transition, 0.25s ease);
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+.sidebar-header {
+    padding: 24px 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.sidebar-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin: 0 auto 10px;
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-header h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.sidebar-role-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #86EFAC;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 6px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 16px 12px;
+    flex: 1;
+}
+
+.sidebar-menu li {
+    margin: 4px 0;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #CBD5E1;
+    text-decoration: none;
+    padding: 11px 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-menu li a i {
+    font-size: 1.05rem;
+    width: 22px;
+    text-align: center;
+    color: #94A3B8;
+    transition: color 0.2s;
+}
+
+.sidebar-menu li a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    transform: translateX(4px);
+}
+
+.sidebar-menu li a:hover i {
+    color: #86EFAC;
+}
+
+.menu-title {
+    padding: 16px 16px 6px;
+    font-size: 0.6875rem;
+    color: #64748B;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+}
+
+.sidebar-menu li.active a, .sidebar-menu li a.active, .active a {
+    background: linear-gradient(90deg, #15803D 0%, #166534 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px rgba(21, 128, 61, 0.35);
+}
+
+.sidebar-menu li.active a i, .sidebar-menu li a.active i, .active a i {
+    color: #FFFFFF !important;
+}
+
+.sidebar-footer {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-user-preview {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sidebar-user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #15803D;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.sidebar-user-meta h4 {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
+}
+
+.sidebar-user-meta p {
+    font-size: 0.7rem;
+    color: #94A3B8;
+    margin: 0;
+}
+
+/* Mobile Sidebar Drawer */
+@media (max-width: 992px) {
+    .sidebar {
+        transform: translateX(-100%);
+        z-index: 2050;
+    }
+    .sidebar.open {
+        transform: translateX(0);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    }
+}
